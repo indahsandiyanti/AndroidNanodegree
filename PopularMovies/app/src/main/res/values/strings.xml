@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="pref_sortCriteria_key">MovieSortCriteria</string>
+    <string name="pref_sortCriteria_default">popular</string>
+</resources>
+
+

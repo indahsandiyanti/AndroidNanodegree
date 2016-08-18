@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Spinner
+        android:id="@+id/spinner_movie_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView_movies"
+        android:numColumns="auto_fit"
+        android:columnWidth="@dimen/gridview_col_width"
+        android:clickable="true"
+        android:verticalSpacing="@dimen/no_margin"
+        android:horizontalSpacing="@dimen/no_margin"
+        android:stretchMode="columnWidth" />
+</LinearLayout>

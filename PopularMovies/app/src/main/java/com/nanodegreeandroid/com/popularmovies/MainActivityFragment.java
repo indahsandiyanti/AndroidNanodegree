@@ -44,13 +44,13 @@ public class MainActivityFragment extends Fragment {
     private String[] sortingCriteriaArr;
     private String selectedCriteria;
 
-    public MainActivityFragment() {
-    }
+    public MainActivityFragment() {}
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sortingCriteriaArr = getResources().getStringArray(R.array.movie_sort_value);
+        selectedCriteria = getString(R.string.pref_sortCriteria_default);
 
         if (savedInstanceState == null || !savedInstanceState.containsKey(MOVIE_STATE_KEY)) {
             movies = new ArrayList<>();
@@ -76,7 +76,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void updateMovies() {
-        Log.i("MainActivityFragment", "Update movies");
+        Log.d("MainActivityFragment", "Update movies");
         FetchPopularMovies fetchPopularMovies = new FetchPopularMovies();
         fetchPopularMovies.execute(selectedCriteria);
     }
@@ -154,20 +154,10 @@ public class MainActivityFragment extends Fragment {
                 R.array.movie_sort_label, android.R.layout.simple_spinner_item);
         sortAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(sortAdapter);
-        spinner.setSelection(getSortingCriteriaIdx());
-        Log.i("MainActivityFragment", "Set Adapter");
-
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-//        sharedPreferences.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
-//            @Override
-//            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-//                sharedPreferences
-//            }
-//        });
+        spinner.setSelection(getSortingCriteriaIdx(), false);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.i("MainActivityFragment", "Spinner On Item Selected is chosen");
                 updateSortingCriteriaPreference(i);
                 updateMovies();
             }

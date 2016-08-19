@@ -18,7 +18,6 @@ import java.util.List;
 public class PopularMoviesAdapter extends ArrayAdapter<Movie> {
 
     public static final String BASE_IMAGE_URI = "https://image.tmdb.org/t/p/w185/";
-    private static final String LOG_TAG = PopularMoviesAdapter.class.getSimpleName();
 
     public PopularMoviesAdapter(Activity context, List<Movie> movies) {
         super(context, 0, movies);

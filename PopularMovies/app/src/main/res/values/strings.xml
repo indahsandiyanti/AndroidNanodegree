@@ -4,6 +4,7 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="pref_sortCriteria_key">MovieSortCriteria</string>
     <string name="pref_sortCriteria_default">popular</string>
+    <string name="powered_by_tmdb_logo">Powered By TMDB Logo</string>
 </resources>
 
 

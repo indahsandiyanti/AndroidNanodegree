@@ -76,7 +76,6 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void updateMovies() {
-        Log.d("MainActivityFragment", "Update movies");
         FetchPopularMovies fetchPopularMovies = new FetchPopularMovies();
         fetchPopularMovies.execute(selectedCriteria);
     }
@@ -129,8 +128,6 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("MainActivityFragment", "OnCreateView is called");
-
         popularMoviesAdapter = new PopularMoviesAdapter(getActivity(),
                 movies);
 

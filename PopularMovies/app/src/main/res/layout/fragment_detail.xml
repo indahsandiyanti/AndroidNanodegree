@@ -32,8 +32,7 @@
                     android:paddingTop="@dimen/activity_horizontal_margin">
                     <TextView
                         style="@style/TextViewNormal"
-                        android:id="@+id/textView_releaseDate"
-                        android:text="test"/>
+                        android:id="@+id/textView_releaseDate"/>
                     <TextView
                         style="@style/TextViewNormal"
                         android:id="@+id/textView_voteAverage"/>

@@ -6,6 +6,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/*
+Popular movie application based on API provided bt TMDB
+https://www.themoviedb.org/documentation/api
+* */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
